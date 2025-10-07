@@ -7,11 +7,13 @@ public class Desafio {
         Locale.setDefault(Locale.US);
         Scanner input = new Scanner(System.in);
         String nomeUser, senhaUser;
+        char opcao;
         String menuDeOpcoes = """
                 Olá, nos diga o que você deseja fazer:
                 (D) Depositar
                 (E) Extrato
                 (S) Sacar
+                (X) Sair
                 """;
         int numConta;
         System.out.println("Vamos abrir sua conta Digite seu Nome:");
@@ -23,12 +25,24 @@ public class Desafio {
         System.out.println("Deseja acessar sua conta ou sair do app? digite A para acessar ou S para sair");
         char acessarConta = input.next().charAt(0);
         if (acessarConta =='A'){
-            switch (tipoConta) {
-                case 'C':
+            System.out.println(menuDeOpcoes);
+            opcao = input.next().charAt(0);
+            while(opcao!= 'X' ) {
+                switch (opcao) {
+                    case 'D':
 
-                    break;
-                case 'P':
-                    break;
+                        break;
+                    case 'E':
+                        break;
+                    case 'S':
+                        break;
+                    case  'X':
+                        break;
+                    default:
+
+                        System.out.println(menuDeOpcoes);
+
+                }
             }
         }else {
             System.out.println("Você escolheu sair, até logo.");
